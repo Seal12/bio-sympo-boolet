@@ -16,7 +16,7 @@
   display: inline-block;
   margin-top: 0.35rem;
   font-weight: 500;
-  color: #9fd7e0;
+  color: #5cc8d6;
   font-size: 0.95rem;
 }
 
@@ -56,8 +56,8 @@
   width: fit-content;
   padding: 0.35rem 0.55rem;
   border-radius: 999px;
-  background: rgba(184, 137, 61, 0.14);
-  color: #7a5a22;
+  background: rgba(232, 138, 46, 0.14);
+  color: #d67822;
   font-size: 0.82rem;
   font-weight: 700;
   white-space: nowrap;

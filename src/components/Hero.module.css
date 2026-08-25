@@ -20,8 +20,8 @@
   inset: 0;
   z-index: -1;
   background:
-    linear-gradient(180deg, rgba(7, 26, 36, 0.35) 0%, rgba(7, 26, 36, 0.78) 58%, rgba(7, 26, 36, 0.92) 100%),
-    linear-gradient(90deg, rgba(7, 26, 36, 0.55), transparent 55%);
+    linear-gradient(180deg, rgba(20, 42, 92, 0.35) 0%, rgba(20, 42, 92, 0.78) 58%, rgba(20, 42, 92, 0.92) 100%),
+    linear-gradient(90deg, rgba(20, 42, 92, 0.55), transparent 55%);
 }
 
 .content {
@@ -36,7 +36,7 @@
   text-transform: uppercase;
   font-size: 0.8rem;
   font-weight: 700;
-  color: #9fd7e0;
+  color: #5cc8d6;
 }
 
 .title {
@@ -47,7 +47,7 @@
 }
 
 .title span {
-  color: #7ec8d4;
+  color: #7ed4df;
 }
 
 .subtitle {

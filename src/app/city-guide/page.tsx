@@ -21,7 +21,7 @@ export default function CityGuidePage() {
         />
         <div className={styles.heroVeil} />
         <div className={`container ${styles.heroText}`}>
-          <p className="eyebrow" style={{ color: "#9fd7e0" }}>
+          <p className="eyebrow" style={{ color: "#5cc8d6" }}>
             Travel
           </p>
           <h1>{cityGuide.title}</h1>

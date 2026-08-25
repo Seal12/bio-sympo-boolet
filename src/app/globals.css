@@ -1,23 +1,23 @@
-/* Coastal academic design tokens — BIO2026 */
+/* Bio2026 Student Symposium design tokens */
 :root {
-  --ink: #071a24;
-  --ink-soft: #1a3340;
-  --text: #24353d;
-  --muted: #5a6f78;
-  --accent: #1a8a9e;
-  --accent-deep: #0f6b7a;
-  --accent-soft: #d8eef2;
-  --surface: #eef6f7;
-  --surface-2: #f7fbfc;
+  --ink: #142a5c;
+  --ink-soft: #1d3b7a;
+  --text: #3d5468;
+  --muted: #8a9db0;
+  --accent: #e88a2e;
+  --accent-deep: #d67822;
+  --accent-soft: #fdf0e3;
+  --surface: #f6f3ec;
+  --surface-2: #fdfaf3;
   --white: #ffffff;
-  --gold: #b8893d;
-  --border: rgba(7, 26, 36, 0.12);
-  --shadow: 0 12px 40px rgba(7, 26, 36, 0.08);
+  --gold: #5cc8d6;
+  --border: rgba(20, 42, 92, 0.12);
+  --shadow: 0 12px 40px rgba(20, 42, 92, 0.08);
   --radius: 4px;
   --max: 1120px;
   --header-h: 72px;
-  --font-display: var(--font-fraunces), "Times New Roman", serif;
-  --font-body: var(--font-source-sans), "Segoe UI", sans-serif;
+  --font-display: var(--font-libre-franklin), "Helvetica Neue", sans-serif;
+  --font-body: var(--font-plus-jakarta), "Segoe UI", sans-serif;
 }
 
 *,
@@ -34,8 +34,8 @@ body {
   margin: 0;
   color: var(--text);
   background:
-    radial-gradient(1200px 600px at 10% -10%, rgba(26, 138, 158, 0.12), transparent 60%),
-    radial-gradient(900px 500px at 100% 0%, rgba(184, 137, 61, 0.08), transparent 55%),
+    radial-gradient(1200px 600px at 10% -10%, rgba(232, 138, 46, 0.12), transparent 60%),
+    radial-gradient(900px 500px at 100% 0%, rgba(92, 200, 214, 0.08), transparent 55%),
     linear-gradient(180deg, var(--surface-2), var(--white) 40%, var(--surface));
   background-attachment: fixed;
   font-family: var(--font-body);
@@ -68,7 +68,7 @@ h4 {
   color: var(--ink);
   line-height: 1.15;
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
 }
 
 p {
