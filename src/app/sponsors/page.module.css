@@ -1,0 +1,38 @@
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.25rem;
+}
+
+.card {
+  margin: 0;
+  background: var(--ink);
+  border-radius: var(--radius);
+  padding: 1.25rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.logoWrap {
+  min-height: 120px;
+  display: grid;
+  place-items: center;
+  margin-bottom: 0.85rem;
+}
+
+.logo {
+  width: 100%;
+  height: auto;
+  max-height: 110px;
+  object-fit: contain;
+}
+
+.card figcaption {
+  font-size: 0.92rem;
+  text-align: center;
+}
+
+@media (max-width: 800px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+}

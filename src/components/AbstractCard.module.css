@@ -1,0 +1,33 @@
+.card {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  padding: 1.1rem 1.15rem;
+  border-bottom: 1px solid var(--border);
+  transition: background 160ms ease, padding-left 160ms ease;
+}
+
+.card:hover {
+  background: rgba(26, 138, 158, 0.06);
+  padding-left: 1.35rem;
+}
+
+.session {
+  margin: 0 0 0.35rem;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-deep);
+}
+
+.title {
+  margin: 0 0 0.4rem;
+  font-size: 1.15rem;
+}
+
+.authors {
+  margin: 0;
+  color: var(--muted);
+  font-size: 0.95rem;
+}

@@ -1,0 +1,30 @@
+.back {
+  margin: 0 0 1rem;
+}
+
+.affil,
+.email {
+  color: var(--muted);
+  font-size: 0.95rem;
+  max-width: 48rem;
+}
+
+.email {
+  margin-bottom: 1.5rem;
+}
+
+.body {
+  max-width: 48rem;
+}
+
+.body p {
+  margin-bottom: 1rem;
+}
+
+.keywords {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--border);
+  color: var(--ink-soft);
+  max-width: 48rem;
+}

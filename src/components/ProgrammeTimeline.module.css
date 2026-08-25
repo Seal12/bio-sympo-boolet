@@ -1,0 +1,133 @@
+.wrap {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.day {
+  margin: 0;
+  padding: 1rem 1.15rem;
+  background: var(--ink);
+  color: var(--white);
+  border-radius: var(--radius);
+  font-weight: 650;
+}
+
+.day span {
+  display: inline-block;
+  margin-top: 0.35rem;
+  font-weight: 500;
+  color: #9fd7e0;
+  font-size: 0.95rem;
+}
+
+.timeline {
+  display: grid;
+  gap: 0;
+  border-left: 2px solid var(--accent-soft);
+  padding-left: 1rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: minmax(120px, 160px) 1fr;
+  gap: 1rem;
+  padding: 1.15rem 0 1.35rem;
+  border-bottom: 1px solid var(--border);
+  position: relative;
+}
+
+.item::before {
+  content: "";
+  position: absolute;
+  left: calc(-1rem - 5px);
+  top: 1.45rem;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px var(--accent-soft);
+}
+
+.time {
+  position: sticky;
+  top: calc(var(--header-h) + 0.75rem);
+  align-self: start;
+  display: inline-flex;
+  width: fit-content;
+  padding: 0.35rem 0.55rem;
+  border-radius: 999px;
+  background: rgba(184, 137, 61, 0.14);
+  color: #7a5a22;
+  font-size: 0.82rem;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.title {
+  margin: 0 0 0.4rem;
+  font-size: 1.2rem;
+}
+
+.detail,
+.focus,
+.meta {
+  margin: 0 0 0.45rem;
+  color: var(--muted);
+  font-size: 0.95rem;
+}
+
+.tracks {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-top: 0.75rem;
+}
+
+.track {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 0.9rem;
+}
+
+.track h4 {
+  margin: 0 0 0.5rem;
+  font-size: 1.05rem;
+}
+
+.talks {
+  list-style: none;
+  margin: 0.75rem 0 0;
+  padding: 0;
+  display: grid;
+  gap: 0.65rem;
+}
+
+.talks li {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  gap: 0.65rem;
+  font-size: 0.95rem;
+}
+
+.slot {
+  color: var(--accent-deep);
+  font-weight: 700;
+  font-size: 0.82rem;
+  white-space: nowrap;
+}
+
+@media (max-width: 860px) {
+  .item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+
+  .tracks {
+    grid-template-columns: 1fr;
+  }
+
+  .time {
+    position: static;
+  }
+}
