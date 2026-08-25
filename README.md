@@ -8,11 +8,13 @@ Live (GitHub Pages): https://seal12.github.io/bio-sympo-boolet/
 ## Requirements
 
 - **Node.js 22** (pinned in [`.nvmrc`](.nvmrc))
+- **pnpm 11.24.0** (pinned via `packageManager` in `package.json`; Corepack recommended)
 
 ```bash
 nvm use
-npm install
-npm run dev
+corepack enable
+pnpm install
+pnpm dev
 ```
 
 Open [http://localhost:3000](http://localhost:3000).
@@ -21,13 +23,13 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ```bash
 nvm use
-npm run build
+pnpm build
 ```
 
 Output is written to `out/`. Preview locally (paths without GitHub Pages `basePath`):
 
 ```bash
-npx serve out
+pnpm dlx serve out
 ```
 
 On GitHub Actions, `GITHUB_ACTIONS=true` enables `basePath` / `assetPrefix` of `/bio-sympo-boolet` so assets resolve under project Pages.
@@ -44,8 +46,8 @@ Booklet copy lives in typed modules under `src/content/`. Images/logos are under
 
 ## Scripts
 
-| Command        | Description              |
-|----------------|--------------------------|
-| `npm run dev`  | Local development server |
-| `npm run build`| Static export to `out/`  |
-| `npm run lint` | ESLint                   |
+| Command         | Description              |
+|-----------------|--------------------------|
+| `pnpm dev`      | Local development server |
+| `pnpm build`    | Static export to `out/`  |
+| `pnpm lint`     | ESLint                   |
