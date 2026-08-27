@@ -1,0 +1,5 @@
+.emblem {
+  width: min(200px, 60vw);
+  height: auto;
+  margin: 0 0 1.5rem;
+}

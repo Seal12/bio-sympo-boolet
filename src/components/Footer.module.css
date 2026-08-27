@@ -11,11 +11,10 @@
   gap: 2rem;
 }
 
-.brand {
-  font-family: var(--font-display);
-  font-size: 1.6rem;
-  color: var(--white);
-  margin: 0 0 0.5rem;
+.footerLogo {
+  width: min(200px, 100%);
+  height: auto;
+  margin: 0 0 0.75rem;
 }
 
 .copy,

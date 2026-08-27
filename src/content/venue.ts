@@ -1,6 +1,5 @@
 /**
  * Venue, connectivity, and emergency information from the booklet.
- * Note: parking details beyond the heading were truncated in the PDF source.
  */
 import { asset } from "@/lib/asset";
 
@@ -12,8 +11,19 @@ export const venue = {
     "Parking for external guests: details will be confirmed at registration / on site.",
   mapImage: asset("/assets/hero/venue-map.png"),
   wifi: {
-    network: "Guest",
-    password: "Provided at the venue",
+    network: "wifi05@mandela.ac.za",
+    networkHint: "wifi-zero-five",
+    password: "IneAqu#99",
+    eduroamSteps: [
+      "Launch the GetEduroam app.",
+      "In the search bar, search for Nelson Mandela University and click Connect.",
+      "Enter your username and password in the format username@mandela.ac.za (e.g. wifi01@mandela.ac.za).",
+      "Click Log In.",
+      "When prompted, allow the app to add a Wi-Fi hotspot to your device.",
+      "Select Join when asked to connect to the eduroam Wi-Fi network (when within range of an eduroam hotspot).",
+    ],
+    eduroamNote:
+      "The steps above are generic and may differ slightly from device to device.",
   },
   socials: [
     { label: "LinkedIn", value: "SASBi | SAGS Student Bio-Symposium 2026" },

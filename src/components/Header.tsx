@@ -4,8 +4,8 @@ import Link from "next/link";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
+import { logos } from "@/content/logos";
 import { navItems, site } from "@/content/site";
-import { asset } from "@/lib/asset";
 import styles from "./Header.module.css";
 
 export function Header() {
@@ -22,16 +22,13 @@ export function Header() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
           <Image
-            src={asset("/assets/logos/bio26-mark.svg")}
-            alt="BIO 2026"
-            width={140}
-            height={32}
+            src={logos.medallionWhite}
+            alt={logos.alt}
+            width={48}
+            height={48}
             priority
+            className={styles.brandLogo}
           />
-          <span className={styles.brandText}>
-            <strong>SASBi | SAGS</strong>
-            <span>Student Symposium</span>
-          </span>
         </Link>
 
         <button

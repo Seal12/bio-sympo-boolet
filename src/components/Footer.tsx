@@ -1,4 +1,6 @@
+import Image from "next/image";
 import Link from "next/link";
+import { logos } from "@/content/logos";
 import { site } from "@/content/site";
 import styles from "./Footer.module.css";
 
@@ -7,7 +9,13 @@ export function Footer() {
     <footer className={styles.footer}>
       <div className={`container ${styles.grid}`}>
         <div>
-          <p className={styles.brand}>{site.shortName}</p>
+          <Image
+            src={logos.wordmarkWhite}
+            alt={logos.alt}
+            width={200}
+            height={200}
+            className={styles.footerLogo}
+          />
           <p className={styles.copy}>
             {site.name}
             <br />

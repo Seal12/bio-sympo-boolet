@@ -1,5 +1,8 @@
 import type { Metadata } from "next";
+import Image from "next/image";
+import { logos } from "@/content/logos";
 import { welcome } from "@/content/welcome";
+import styles from "./page.module.css";
 
 export const metadata: Metadata = {
   title: "Welcome",
@@ -8,6 +11,13 @@ export const metadata: Metadata = {
 export default function WelcomePage() {
   return (
     <div className="container page">
+      <Image
+        src={logos.medallionCream}
+        alt={logos.alt}
+        width={200}
+        height={200}
+        className={styles.emblem}
+      />
       <header className="pageHeader">
         <p className="eyebrow">Organising committee</p>
         <h1>{welcome.title}</h1>
