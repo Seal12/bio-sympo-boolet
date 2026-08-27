@@ -19,7 +19,15 @@ export const site = {
     instagram: "@student.biosymposium",
     bluesky: "@biosymposium2026.bsky.social",
   },
-  pdfPath: "/BIO26-SYMPO-BOOKLET-FINAL.pdf",
+  pdfPath: "/BIO26-SYMPO-BOOKLET.pdf",
+  hero: {
+    eyebrow: "SASBi | SAGS Bio2026 Student Symposium",
+    headline: "A day for early-career researchers to take the",
+    headlineHighlight: "main stage",
+    lede: "Held the day before the 2026 Biennial Conference, Bio2026 is a one-day hybrid symposium where students and emerging scientists showcase their research, build connections, and learn from leaders in genetics and bioinformatics.",
+    hybridLabel: "Hybrid event",
+    hashtag: "#BIO2026inNMU",
+  },
 } as const;
 
 export type NavItem = { href: string; label: string };

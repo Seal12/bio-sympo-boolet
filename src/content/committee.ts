@@ -28,7 +28,7 @@ export const committee: CommitteeMember[] = [
   },
   {
     name: "Odireleng Mosuwe",
-    role: "Program",
+    role: "Program, Design & Finance",
     detail: "Treasurer of SASBi Student Council",
     affiliation: "University of Pretoria",
     image: asset("/assets/committee/odireleng-m.jpeg"),
