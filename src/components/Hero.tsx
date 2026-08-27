@@ -1,5 +1,6 @@
 import Link from "next/link";
 import Image from "next/image";
+import { logos } from "@/content/logos";
 import { site } from "@/content/site";
 import { asset } from "@/lib/asset";
 import styles from "./Hero.module.css";
@@ -17,11 +18,14 @@ export function Hero() {
       />
       <div className={styles.veil} />
       <div className={`container ${styles.content}`}>
-        <p className={styles.org}>SASBi | SAGS</p>
-        <h1 className={styles.title}>
-          <span>BIO</span> 2026
-        </h1>
-        <p className={styles.subtitle}>Student Symposium</p>
+        <Image
+          src={logos.wordmarkWhite}
+          alt={logos.alt}
+          width={520}
+          height={520}
+          priority
+          className={styles.wordmark}
+        />
         <p className={styles.tagline}>{site.tagline}</p>
         <p className={styles.meta}>
           {site.dateLabel}

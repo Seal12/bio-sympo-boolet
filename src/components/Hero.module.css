@@ -30,31 +30,10 @@
   animation: rise 700ms ease both;
 }
 
-.org {
-  margin: 0 0 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 700;
-  color: #5cc8d6;
-}
-
-.title {
-  margin: 0;
-  font-size: clamp(3.4rem, 10vw, 6rem);
-  color: var(--white);
-  letter-spacing: -0.04em;
-}
-
-.title span {
-  color: #7ed4df;
-}
-
-.subtitle {
-  margin: 0.15rem 0 1rem;
-  font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  color: rgba(255, 255, 255, 0.92);
+.wordmark {
+  width: min(520px, 92vw);
+  height: auto;
+  margin: 0 0 1rem;
 }
 
 .tagline {

@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
+import { logos } from "@/content/logos";
 import { site } from "@/content/site";
 import { keynotes } from "@/content/speakers";
 import { asset } from "@/lib/asset";
@@ -12,6 +13,13 @@ export default function HomePage() {
     <>
       <Hero />
       <section className={`container ${styles.section}`}>
+        <Image
+          src={logos.wordmarkCream}
+          alt={logos.alt}
+          width={360}
+          height={360}
+          className={styles.aboutLogo}
+        />
         <SectionHeading
           eyebrow="About the symposium"
           title={site.theme}
