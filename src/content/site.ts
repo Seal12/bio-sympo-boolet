@@ -19,7 +19,7 @@ export const site = {
     instagram: "@student.biosymposium",
     bluesky: "@biosymposium2026.bsky.social",
   },
-  pdfPath: "/BIO26-SYMPO-BOOKLET.pdf",
+  pdfPath: "/BIO2026-SYMPOSIUM-BOOKLET.pdf",
   hero: {
     eyebrow: "SASBi | SAGS Bio2026 Student Symposium",
     headline: "A day for early-career researchers to take the",
