@@ -3,7 +3,7 @@
 Static Next.js site for the **SASBi | SAGS BIO2026 Student Symposium** programme booklet
 (Nelson Mandela University, Gqeberha — 31 August 2026).
 
-Live (GitHub Pages): https://seal12.github.io/bio-sympo-boolet/
+Live: https://bio-sympo.vividhouse.co.za/
 
 ## Requirements
 
@@ -26,23 +26,32 @@ nvm use
 pnpm build
 ```
 
-Output is written to `out/`. Preview locally (paths without GitHub Pages `basePath`):
+Output is written to `out/`. Preview locally:
 
 ```bash
 pnpm dlx serve out
 ```
 
-On GitHub Actions, `GITHUB_ACTIONS=true` enables `basePath` / `assetPrefix` of `/bio-sympo-boolet` so assets resolve under project Pages.
-
 ## GitHub Pages setup
 
 1. Repo **Settings → Pages → Source: GitHub Actions**.
 2. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually).
-3. Site URL: `https://seal12.github.io/bio-sympo-boolet/`
+3. **Settings → Pages → Custom domain**: `bio-sympo.vividhouse.co.za` (wait for DNS, then enable **Enforce HTTPS**).
+4. Site URL: `https://bio-sympo.vividhouse.co.za/`
+
+### Afrihost DNS (vividhouse.co.za)
+
+In the Afrihost control panel for **vividhouse.co.za**, add:
+
+| Type  | Host / name   | Value / points to   |
+|-------|---------------|---------------------|
+| CNAME | `bio-sympo`   | `seal12.github.io`  |
+
+Use only the subdomain label (`bio-sympo`), not the full hostname, if Afrihost asks for the host field. DNS can take up to an hour (sometimes longer) to propagate before GitHub shows the domain as verified.
 
 ## Content
 
-Booklet copy lives in typed modules under `src/content/`. Images/logos are under `public/assets/` (PNG/SVG); reference them via `asset()` from `src/lib/asset.ts` so GitHub Pages `basePath` is applied.
+Booklet copy lives in typed modules under `src/content/`. Images/logos are under `public/assets/` (PNG/SVG); reference them via `asset()` from `src/lib/asset.ts`.
 
 ## Scripts
 
