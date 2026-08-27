@@ -1,0 +1,19 @@
+---
+description: Never push or run anything against remotes without explicit user permission
+alwaysApply: true
+---
+
+# No remote actions without permission
+
+Do **not** interact with remotes unless the user explicitly asks in the current message.
+
+Forbidden without an explicit ask:
+- `git push`, `git push --force`, setting upstream (`-u`), or any push to origin/remote
+- Triggering CI/CD or GitHub Actions (`gh workflow run`, `gh run rerun`, workflow_dispatch via API)
+- Creating/updating/merging PRs, releases, deployments, or Pages publishes
+- Any other command that mutates remote state (force-push, delete remote branch, etc.)
+
+Allowed without asking:
+- Read-only remote queries (`git status`, `git fetch` only if needed for local inspection, `gh run list`/`gh run view`, `gh pr view`)
+
+If a task seems to require a remote action, stop and ask first. Plan approval or “implement the plan” does **not** count as permission to push or run remote workflows.

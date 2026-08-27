@@ -2,13 +2,15 @@
  * Venue, connectivity, and emergency information from the booklet.
  * Note: parking details beyond the heading were truncated in the PDF source.
  */
+import { asset } from "@/lib/asset";
+
 export const venue = {
   title: "Venue information",
   description:
     "The SASBi | SAGS BIO2026 Student Symposium will be held at the Digital Dome on Ocean Science Campus, Summerstrand, Nelson Mandela Bay, Nelson Mandela University.",
   parking:
     "Parking for external guests: details will be confirmed at registration / on site.",
-  mapImage: "/assets/hero/venue-map.png",
+  mapImage: asset("/assets/hero/venue-map.png"),
   wifi: {
     network: "Guest",
     password: "Provided at the venue",

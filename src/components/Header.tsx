@@ -5,6 +5,7 @@ import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { useState } from "react";
 import { navItems, site } from "@/content/site";
+import { asset } from "@/lib/asset";
 import styles from "./Header.module.css";
 
 export function Header() {
@@ -21,7 +22,7 @@ export function Header() {
       <div className={`container ${styles.inner}`}>
         <Link href="/" className={styles.brand} onClick={() => setOpen(false)}>
           <Image
-            src="/assets/logos/bio26-mark.svg"
+            src={asset("/assets/logos/bio26-mark.svg")}
             alt="BIO 2026"
             width={140}
             height={32}

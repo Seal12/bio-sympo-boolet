@@ -4,6 +4,7 @@ import { Hero } from "@/components/Hero";
 import { SectionHeading } from "@/components/SectionHeading";
 import { site } from "@/content/site";
 import { keynotes } from "@/content/speakers";
+import { asset } from "@/lib/asset";
 import styles from "./page.module.css";
 
 export default function HomePage() {
@@ -86,7 +87,7 @@ export default function HomePage() {
             </Link>
           </div>
           <Image
-            src="/assets/city/donkin-lighthouse.png"
+            src={asset("/assets/city/donkin-lighthouse.png")}
             alt="Donkin Reserve lighthouse in Gqeberha"
             width={800}
             height={520}

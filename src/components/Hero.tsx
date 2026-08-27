@@ -1,13 +1,14 @@
 import Link from "next/link";
 import Image from "next/image";
 import { site } from "@/content/site";
+import { asset } from "@/lib/asset";
 import styles from "./Hero.module.css";
 
 export function Hero() {
   return (
     <section className={styles.hero}>
       <Image
-        src="/assets/hero/architecture.png"
+        src={asset("/assets/hero/architecture.png")}
         alt=""
         fill
         priority

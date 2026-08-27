@@ -1,13 +1,15 @@
 /**
  * Gqeberha travel city guide from the booklet.
  */
+import { asset } from "@/lib/asset";
+
 export const cityGuide = {
   title: "Gqeberha Travel City Guide",
   subtitle: "Welcome to the “Friendly City”",
   intro:
     "Port Elizabeth, officially renamed Gqeberha, is located on the breathtaking shores of Algoa Bay in the Eastern Cape Province. Known for its rich cultural history, pristine wind-swept coastlines, and exceptional wildlife access, it offers delegates a perfect blend of academic atmosphere and natural beauty.",
-  heroImage: "/assets/city/donkin-lighthouse.png",
-  secondaryImage: "/assets/city/beachfront.png",
+  heroImage: asset("/assets/city/donkin-lighthouse.png"),
+  secondaryImage: asset("/assets/city/beachfront.png"),
   highlights: [
     {
       title: "The Beachfront Promenade",

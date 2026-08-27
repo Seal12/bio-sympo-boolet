@@ -42,7 +42,7 @@ On GitHub Actions, `GITHUB_ACTIONS=true` enables `basePath` / `assetPrefix` of `
 
 ## Content
 
-Booklet copy lives in typed modules under `src/content/`. Images/logos are under `public/assets/` (PNG/SVG).
+Booklet copy lives in typed modules under `src/content/`. Images/logos are under `public/assets/` (PNG/SVG); reference them via `asset()` from `src/lib/asset.ts` so GitHub Pages `basePath` is applied.
 
 ## Scripts
 
