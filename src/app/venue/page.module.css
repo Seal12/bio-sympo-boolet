@@ -62,3 +62,10 @@
   color: var(--accent-deep);
   font-weight: 700;
 }
+
+.steps {
+  margin: 0;
+  padding-left: 1.25rem;
+  display: grid;
+  gap: 0.45rem;
+}

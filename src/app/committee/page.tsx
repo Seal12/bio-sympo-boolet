@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import { committee } from "@/content/committee";
 import styles from "./page.module.css";
 
@@ -20,8 +21,14 @@ export default function CommitteePage() {
       <div className={styles.grid}>
         {committee.map((member) => (
           <article key={member.name} className={styles.card}>
-            <div className={styles.avatar} aria-hidden="true">
-              {member.initials}
+            <div className={styles.photoWrap}>
+              <Image
+                src={member.image}
+                alt={member.name}
+                width={144}
+                height={144}
+                className={styles.photo}
+              />
             </div>
             <div>
               <h2>{member.name}</h2>

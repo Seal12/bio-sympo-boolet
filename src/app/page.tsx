@@ -41,6 +41,9 @@ export default function HomePage() {
           <Link href="/venue/" className="btn btnOnLight">
             Venue & Wi‑Fi
           </Link>
+          <a href={asset(site.pdfPath)} className="btn btnOnLight" download>
+            Download booklet
+          </a>
         </div>
       </section>
 

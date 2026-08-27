@@ -19,7 +19,7 @@ export const site = {
     instagram: "@student.biosymposium",
     bluesky: "@biosymposium2026.bsky.social",
   },
-  pdfPath: "/BIO26-SYMPO-BOOKLET.pdf",
+  pdfPath: "/BIO26-SYMPO-BOOKLET-FINAL.pdf",
 } as const;
 
 export type NavItem = { href: string; label: string };

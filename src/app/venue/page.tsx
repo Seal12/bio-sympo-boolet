@@ -36,13 +36,22 @@ export default function VenuePage() {
           <dl className={styles.dl}>
             <div>
               <dt>Wi‑Fi network</dt>
-              <dd>{venue.wifi.network}</dd>
+              <dd>
+                {venue.wifi.network} ({venue.wifi.networkHint})
+              </dd>
             </div>
             <div>
               <dt>Wi‑Fi password</dt>
               <dd>{venue.wifi.password}</dd>
             </div>
           </dl>
+          <h3>Eduroam (GetEduroam app)</h3>
+          <ol className={styles.steps}>
+            {venue.wifi.eduroamSteps.map((step) => (
+              <li key={step}>{step}</li>
+            ))}
+          </ol>
+          <p className={styles.note}>{venue.wifi.eduroamNote}</p>
           <h3>Social</h3>
           <ul className={styles.list}>
             {venue.socials.map((s) => (
