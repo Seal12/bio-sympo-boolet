@@ -3,7 +3,7 @@
 Static Next.js site for the **SASBi | SAGS BIO2026 Student Symposium** programme booklet
 (Nelson Mandela University, Gqeberha — 31 August 2026).
 
-Live: https://bio-sympo.vividhouse.co.za/
+Live: https://symposium-booklet.vividhouse.co.za/
 
 ## Requirements
 
@@ -36,8 +36,8 @@ pnpm dlx serve out
 
 1. Repo **Settings → Pages → Source: GitHub Actions**.
 2. Push to `main` (or run the **Deploy to GitHub Pages** workflow manually).
-3. **Settings → Pages → Custom domain**: `bio-sympo.vividhouse.co.za` (wait for DNS, then enable **Enforce HTTPS**).
-4. Site URL: `https://bio-sympo.vividhouse.co.za/`
+3. **Settings → Pages → Custom domain**: `symposium-booklet.vividhouse.co.za` (wait for DNS, then enable **Enforce HTTPS**).
+4. Site URL: `https://symposium-booklet.vividhouse.co.za/`
 
 ### Afrihost DNS (vividhouse.co.za)
 
@@ -45,9 +45,9 @@ In the Afrihost control panel for **vividhouse.co.za**, add:
 
 | Type  | Host / name   | Value / points to   |
 |-------|---------------|---------------------|
-| CNAME | `bio-sympo`   | `seal12.github.io`  |
+| CNAME | `symposium-booklet`   | `seal12.github.io`  |
 
-Use only the subdomain label (`bio-sympo`), not the full hostname, if Afrihost asks for the host field. DNS can take up to an hour (sometimes longer) to propagate before GitHub shows the domain as verified.
+Use only the subdomain label (`symposium-booklet`), not the full hostname, if Afrihost asks for the host field. DNS can take up to an hour (sometimes longer) to propagate before GitHub shows the domain as verified.
 
 ## Content
 

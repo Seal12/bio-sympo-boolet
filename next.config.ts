@@ -1,6 +1,6 @@
 import type { NextConfig } from "next";
 
-/** GitHub Pages custom domain: https://bio-sympo.vividhouse.co.za/ */
+/** GitHub Pages custom domain: https://symposium-booklet.vividhouse.co.za/ */
 
 const nextConfig: NextConfig = {
   output: "export",
