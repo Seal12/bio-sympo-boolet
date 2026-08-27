@@ -1,104 +1,157 @@
 .hero {
   position: relative;
-  min-height: min(88vh, 760px);
-  display: grid;
-  align-items: end;
-  color: var(--white);
+  background: linear-gradient(180deg, #fdfaf3 0%, #f6f3ec 100%);
+  padding: 4rem 0 5rem;
   overflow: hidden;
-  isolation: isolate;
 }
 
-.bg {
-  object-fit: cover;
-  object-position: center;
-  z-index: -2;
-  animation: drift 18s ease-in-out infinite alternate;
-}
-
-.veil {
+.hero::before,
+.hero::after {
+  content: "";
   position: absolute;
-  inset: 0;
-  z-index: -1;
-  background:
-    linear-gradient(180deg, rgba(20, 42, 92, 0.35) 0%, rgba(20, 42, 92, 0.78) 58%, rgba(20, 42, 92, 0.92) 100%),
-    linear-gradient(90deg, rgba(20, 42, 92, 0.55), transparent 55%);
+  width: 520px;
+  height: 520px;
+  border-radius: 50%;
+  opacity: 0.08;
+  z-index: 0;
+  pointer-events: none;
 }
 
-.content {
-  padding: 5rem 0 3.5rem;
-  max-width: 42rem;
-  animation: rise 700ms ease both;
+.hero::before {
+  background: var(--accent);
+  top: -180px;
+  right: -160px;
 }
 
-.org {
-  margin: 0 0 0.75rem;
-  letter-spacing: 0.18em;
-  text-transform: uppercase;
-  font-size: 0.8rem;
+.hero::after {
+  background: var(--gold);
+  bottom: -220px;
+  left: -180px;
+}
+
+.inner {
+  display: grid;
+  grid-template-columns: minmax(280px, 380px) 1fr;
+  gap: 3rem;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.medallion {
+  width: 100%;
+  max-width: 420px;
+  height: auto;
+  margin: 0 auto;
+  filter: drop-shadow(0 18px 48px rgba(20, 42, 92, 0.16));
+}
+
+.text {
+  min-width: 0;
+}
+
+.eyebrow {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.72rem;
   font-weight: 700;
-  color: #5cc8d6;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--accent);
+  background: rgba(232, 138, 46, 0.1);
+  padding: 0.45rem 1rem;
+  border-radius: 100px;
+  margin-bottom: 1.25rem;
 }
 
-.title {
-  margin: 0;
-  font-size: clamp(3.4rem, 10vw, 6rem);
-  color: var(--white);
-  letter-spacing: -0.04em;
+.dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  flex-shrink: 0;
 }
 
-.title span {
-  color: #7ed4df;
-}
-
-.subtitle {
-  margin: 0.15rem 0 1rem;
+.text h1 {
   font-family: var(--font-display);
-  font-size: clamp(1.4rem, 3vw, 2rem);
-  color: rgba(255, 255, 255, 0.92);
+  font-weight: 900;
+  font-size: clamp(2rem, 4.4vw, 3.2rem);
+  line-height: 1.1;
+  color: var(--ink);
+  margin: 0 0 1rem;
+  letter-spacing: -0.02em;
 }
 
-.tagline {
-  margin: 0 0 1rem;
-  font-size: 1.15rem;
-  max-width: 34rem;
-  color: rgba(255, 255, 255, 0.86);
+.highlight {
+  color: var(--accent);
+}
+
+.lede {
+  font-size: 1.05rem;
+  color: var(--text);
+  line-height: 1.7;
+  margin: 0 0 1.75rem;
+  max-width: 560px;
 }
 
 .meta {
-  margin: 0 0 1.75rem;
-  color: rgba(255, 255, 255, 0.72);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-bottom: 1.75rem;
+}
+
+.pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: var(--white);
+  border: 1px solid rgba(20, 42, 92, 0.12);
+  color: var(--ink);
+  padding: 0.55rem 0.95rem;
+  border-radius: 100px;
+  font-size: 0.85rem;
   font-weight: 600;
+  box-shadow: 0 2px 8px rgba(15, 40, 71, 0.04);
+}
+
+.pill svg {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  color: var(--accent);
+}
+
+.pillCyan svg {
+  color: var(--gold);
 }
 
 .cta {
   display: flex;
   flex-wrap: wrap;
   gap: 0.75rem;
+  align-items: center;
 }
 
-@keyframes rise {
-  from {
-    opacity: 0;
-    transform: translateY(18px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
+.hashtag {
+  color: var(--ink);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 0.95rem;
 }
 
-@keyframes drift {
-  from {
-    transform: scale(1.02);
+@media (max-width: 768px) {
+  .hero {
+    padding: 3rem 0 4rem;
   }
-  to {
-    transform: scale(1.08);
-  }
-}
 
-@media (prefers-reduced-motion: reduce) {
-  .bg,
-  .content {
-    animation: none;
+  .inner {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .medallion {
+    max-width: 300px;
   }
 }
