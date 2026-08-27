@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import Image from "next/image";
+import { WifiConnect } from "@/components/WifiConnect";
 import { venue } from "@/content/venue";
 import { site } from "@/content/site";
 import styles from "./page.module.css";
@@ -33,18 +34,11 @@ export default function VenuePage() {
 
         <section className={styles.panel}>
           <h2>Connectivity & digital engagement</h2>
-          <dl className={styles.dl}>
-            <div>
-              <dt>Wi‑Fi network</dt>
-              <dd>
-                {venue.wifi.network} ({venue.wifi.networkHint})
-              </dd>
-            </div>
-            <div>
-              <dt>Wi‑Fi password</dt>
-              <dd>{venue.wifi.password}</dd>
-            </div>
-          </dl>
+          <WifiConnect
+            network={venue.wifi.network}
+            networkHint={venue.wifi.networkHint}
+            password={venue.wifi.password}
+          />
           <h3>Eduroam (GetEduroam app)</h3>
           <ol className={styles.steps}>
             {venue.wifi.eduroamSteps.map((step) => (
